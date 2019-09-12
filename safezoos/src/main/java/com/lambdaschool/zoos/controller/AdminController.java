@@ -74,7 +74,7 @@ public class AdminController
 
         // set the location header for the newly created resource
         HttpHeaders responseHeaders = new HttpHeaders();
-        // URI newZooURI = ServletUriComponentsBuilder.fromCurrentRequest().path("/{zooid}").buildAndExpand(newZoo.getZooid()).toUri();
+//         URI newZooURI = ServletUriComponentsBuilder.fromCurrentRequest().path("/{zooid}").buildAndExpand(newZoo.getZooid()).toUri();
         URI newZooURI = ServletUriComponentsBuilder.fromUriString(request.getServerName() + ":" + request.getLocalPort() + "/zoos/zoos/{zooid}").buildAndExpand(zooid).toUri();
         responseHeaders.setLocation(newZooURI);
 

@@ -133,7 +133,7 @@ public class UserServiceImpl implements UserDetailsService, UserService
                         rolerepos.insertUserRoles(id, ur.getRole().getRoleid());
                     }
                 }
-                
+
                 return userrepos.save(currentUser);
             }
             else
